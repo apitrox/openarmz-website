@@ -8,39 +8,42 @@ if (toggle) {
   });
 }
 
-// Year in footer
+// Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
-// Tiny number counter (progressive enhancement)
-function animateCount(el){
-  const target = Number(el.dataset.count || el.textContent.replace(/[^\d]/g,''));
-  const duration = 900;
-  let start = null;
-  function step(ts){
-    if(!start) start = ts;
-    const p = Math.min((ts-start)/duration, 1);
-    el.textContent = Math.floor(target * (0.2 + 0.8*p)).toLocaleString() + '+';
-    if(p < 1) requestAnimationFrame(step);
-  }
-  requestAnimationFrame(step);
-}
-document.querySelectorAll('.num').forEach(animateCount);
+// Smooth in-view animation for images (progressive enhancement)
+const obs = 'IntersectionObserver' in window
+  ? new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{
+        if(e.isIntersecting){ e.target.classList.add('in'); obs.unobserve(e.target); }
+      });
+    }, {threshold: 0.2})
+  : null;
 
-// Simple, accessible form handlers (demo only)
+document.querySelectorAll('.program img, .photo img').forEach(img=>{
+  img.loading = 'lazy';
+  if(obs){ img.classList.add('fade'); obs.observe(img); }
+});
+
+// Add CSS class styles for fade (inline since tiny)
+const style = document.createElement('style');
+style.textContent = `.fade{opacity:0;transform:translateY(8px);transition:.5s ease}
+.fade.in{opacity:1;transform:none}`;
+document.head.appendChild(style);
+
+// Simple form handlers (demo only)
 function wireForm(id){
   const form = document.getElementById(id);
   if(!form) return;
   const msg = form.querySelector('.form-msg');
   form.addEventListener('submit', (e)=>{
     e.preventDefault();
-    const valid = form.checkValidity();
-    if(!valid){
+    if(!form.checkValidity()){
       msg.textContent = 'Please complete the required fields.';
       msg.style.color = '#fca5a5';
       form.reportValidity();
       return;
     }
-    // Demo success
     msg.textContent = 'Thanks! We\'ll be in touch soon.';
     msg.style.color = '#86efac';
     form.reset();
