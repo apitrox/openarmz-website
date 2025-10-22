@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Open Arms Initiative</title>
+  <meta name="description" content="Get in touch with Open Arms Initiative. Questions, partnerships, press inquiries welcome." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'openarms-blue': '#007CBA',
+            'openarms-blue-dark': '#007CBA',
+            'openarms-green': '#68B42E',
+            'openarms-green-light': '#68B42E',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/Open_Arms_Logo.png">
+  <link rel="apple-touch-icon" href="images/Open_Arms_Logo.png">
+  <script defer src="script.js"></script>
+</head>
+<body class="page-transition">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Open Arms Initiative home">
+        <img src="images/Open_Arms_Logo.png" alt="Open Arms Logo" class="brand-logo">
+        <span class="brand-text">
+          <strong>Open Arms</strong>
+          <small class="brand-sub">Initiative</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="mission.html">Mission</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="donate.html" class="btn btn-primary">Donate</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section page-content">
+      <div class="container grid-2">
+        <div>
+          <h1>Contact</h1>
+          <p class="lead">Questions, partnerships, press inquiries—let's talk.</p>
+          <ul class="list contact-list">
+            <li><strong>Email:</strong> <a href="mailto:hello@openarms.example">hello@openarms.example</a></li>
+            <li><strong>Phone:</strong> <a href="tel:0000000000">(000) 000-0000</a></li>
+            <li><strong>Address:</strong> 123 Hope St, Community, USA</li>
+          </ul>
+          <p>We typically respond to inquiries within 1-2 business days.</p>
+        </div>
+        
+        <form class="card form" id="contact-form" novalidate>
+          <h2>Send a Message</h2>
+          <label>
+            <span>Name</span>
+            <input required name="cname" autocomplete="name" />
+          </label>
+          <label>
+            <span>Email</span>
+            <input required type="email" name="cemail" autocomplete="email" />
+          </label>
+          <label>
+            <span>Subject</span>
+            <input name="subject" />
+          </label>
+          <label>
+            <span>Message</span>
+            <textarea required name="cmsg" rows="5"></textarea>
+          </label>
+          <button class="btn btn-primary" type="submit">Submit</button>
+          <p class="form-msg" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div>
+          <strong>Open Arms</strong>
+          <div class="muted tiny">Initiative</div>
+        </div>
+      </div>
+      <p class="muted tiny">© <span id="year"></span> Open Arms Initiative. All rights reserved.</p>
+      <nav aria-label="Footer">
+        <a href="mission.html">Mission</a>
+        <a href="programs.html">Programs</a>
+        <a href="get-involved.html">Volunteer</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

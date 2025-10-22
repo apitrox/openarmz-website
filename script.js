@@ -52,14 +52,35 @@ function wireForm(id){
 wireForm('volunteer-form');
 wireForm('contact-form');
 
-// Scroll to top when navigating to sections
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-  link.addEventListener('click', (e) => {
-    const href = link.getAttribute('href');
-    if (href && href !== '#') {
-      setTimeout(() => {
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      }, 10);
+// Modern page transitions using View Transition API
+if (document.startViewTransition) {
+  window.navigation.addEventListener('navigate', (e) => {
+    const toUrl = new URL(e.destination.url);
+    
+    // Only apply transition for same-origin navigation
+    if (location.origin === toUrl.origin) {
+      e.intercept({
+        handler: async () => {
+          const response = await fetch(toUrl.pathname);
+          const html = await response.text();
+          const parser = new DOMParser();
+          const newDoc = parser.parseFromString(html, 'text/html');
+          
+          document.startViewTransition(() => {
+            document.body.innerHTML = newDoc.body.innerHTML;
+            document.title = newDoc.title;
+          });
+        }
+      });
     }
   });
-});
+} else {
+  // Fallback: Simple fade for browsers without View Transition API
+  document.addEventListener('DOMContentLoaded', () => {
+    document.body.style.opacity = '0';
+    setTimeout(() => {
+      document.body.style.transition = 'opacity 0.3s ease-in';
+      document.body.style.opacity = '1';
+    }, 10);
+  });
+}

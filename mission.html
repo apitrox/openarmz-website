@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Our Mission — Open Arms Initiative</title>
+  <meta name="description" content="The Open Arms Initiative is dedicated to strengthening our community through compassion, support, and opportunity." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'openarms-blue': '#007CBA',
+            'openarms-blue-dark': '#007CBA',
+            'openarms-green': '#68B42E',
+            'openarms-green-light': '#68B42E',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/Open_Arms_Logo.png">
+  <link rel="apple-touch-icon" href="images/Open_Arms_Logo.png">
+  <script defer src="script.js"></script>
+</head>
+<body class="page-transition">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Open Arms Initiative home">
+        <img src="images/Open_Arms_Logo.png" alt="Open Arms Logo" class="brand-logo">
+        <span class="brand-text">
+          <strong>Open Arms</strong>
+          <small class="brand-sub">Initiative</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="mission.html" class="active">Mission</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="donate.html" class="btn btn-primary">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section page-content">
+      <div class="container grid-2">
+        <div>
+          <h1>Our Mission</h1>
+          <p class="lead">
+            The <strong>Open Arms Initiative</strong> is dedicated to strengthening our community by extending compassion,
+            support, and opportunity to those in need. Through donations, education, and resource development, we uplift
+            individuals and families—fostering resilience, dignity, and hope.
+          </p>
+          <ul class="checks">
+            <li>Compassion in action</li>
+            <li>Education & resources</li>
+            <li>Lasting community impact</li>
+          </ul>
+          <a class="btn btn-primary" href="programs.html">Explore Programs</a>
+        </div>
+
+        <figure class="card photo">
+          <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400&auto=format&fit=crop" alt="Food distribution volunteers serving community members" />
+          <figcaption class="muted tiny">Volunteers serving neighbors</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div>
+          <strong>Open Arms</strong>
+          <div class="muted tiny">Initiative</div>
+        </div>
+      </div>
+      <p class="muted tiny">© <span id="year"></span> Open Arms Initiative. All rights reserved.</p>
+      <nav aria-label="Footer">
+        <a href="mission.html">Mission</a>
+        <a href="programs.html">Programs</a>
+        <a href="get-involved.html">Volunteer</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

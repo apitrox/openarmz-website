@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Donate — Open Arms Initiative</title>
+  <meta name="description" content="Support Open Arms Initiative. Your gift sustains vital programs and expands our reach." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'openarms-blue': '#007CBA',
+            'openarms-blue-dark': '#007CBA',
+            'openarms-green': '#68B42E',
+            'openarms-green-light': '#68B42E',
+          },
+          fontFamily: {
+            'sans': ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="images/Open_Arms_Logo.png">
+  <link rel="apple-touch-icon" href="images/Open_Arms_Logo.png">
+  <script defer src="script.js"></script>
+  <script defer src="https://donorbox.org/widget.js" paypalExpress="false"></script>
+</head>
+<body class="page-transition">
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="index.html" aria-label="Open Arms Initiative home">
+        <img src="images/Open_Arms_Logo.png" alt="Open Arms Logo" class="brand-logo">
+        <span class="brand-text">
+          <strong>Open Arms</strong>
+          <small class="brand-sub">Initiative</small>
+        </span>
+      </a>
+
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">
+        <span class="sr-only">Menu</span>
+        <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+      </button>
+
+      <nav id="site-nav" class="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="mission.html">Mission</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="donate.html" class="btn btn-primary active">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section page-content donate">
+      <div class="container grid-2">
+        <div>
+          <h1>Support the Work</h1>
+          <p class="lead">Your gift sustains vital programs and expands our reach. Every contribution matters.</p>
+
+          <div class="card donorbox-wrap">
+            <iframe
+              allowpaymentrequest
+              frameborder="0"
+              height="900"
+              name="donorbox"
+              scrolling="no"
+              seamless="seamless"
+              src="https://donorbox.org/embed/open-arms-giving"
+              style="max-width: 100%; min-width: 280px"
+              width="100%"
+              title="Donate via Donorbox">
+            </iframe>
+          </div>
+
+          <p class="muted tiny">Prefer another method?</p>
+          <div class="donate-cta">
+            <a class="btn btn-primary" href="https://buy.stripe.com/test_XXXXXXXXXXXX" rel="noopener" target="_blank">Donate via Stripe</a>
+            <a class="btn" href="https://www.paypal.com/donate/?hosted_button_id=XXXXXXXXXXXX" rel="noopener" target="_blank">Donate via PayPal</a>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2>Why Give</h2>
+          <ul class="checks">
+            <li>Transparent, mission-driven spending</li>
+            <li>Local impact with measurable results</li>
+            <li>Tax-deductible contributions (where applicable)</li>
+          </ul>
+          <figure class="photo tight">
+            <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=1200&auto=format&fit=crop" alt="Hands joined together in solidarity" />
+          </figure>
+          <p class="muted">Your support directly funds emergency assistance, educational programs, and community resources that change lives.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <div>
+          <strong>Open Arms</strong>
+          <div class="muted tiny">Initiative</div>
+        </div>
+      </div>
+      <p class="muted tiny">© <span id="year"></span> Open Arms Initiative. All rights reserved.</p>
+      <nav aria-label="Footer">
+        <a href="mission.html">Mission</a>
+        <a href="programs.html">Programs</a>
+        <a href="get-involved.html">Volunteer</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </footer>
+</body>
+</html>

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
   <title>Open Arms — Hope. Support. Community.</title>
   <meta name="description" content="Open Arms strengthens our community through compassion, support, and opportunity. Hope. Support. Community." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,6 +30,12 @@
   <link rel="icon" type="image/png" href="images/Open_Arms_Logo.png">
   <link rel="apple-touch-icon" href="images/Open_Arms_Logo.png">
   <script defer src="script.js"></script>
+  <style>
+    /* Mobile-first view transitions */
+    @view-transition {
+      navigation: auto;
+    }
+  </style>
 
   <!-- Donorbox -->
   <script defer src="https://donorbox.org/widget.js" paypalExpress="false"></script>
@@ -48,12 +54,12 @@
   }
   </script>
 </head>
-<body>
+<body class="page-transition">
   <a class="skip-link" href="#main">Skip to content</a>
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="Open Arms Initiative home">
+      <a class="brand" href="index.html" aria-label="Open Arms Initiative home">
         <img src="images/Open_Arms_Logo.png" alt="Open Arms Logo" class="brand-logo">
         <span class="brand-text">
           <strong>Open Arms</strong>
@@ -68,11 +74,11 @@
 
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <ul>
-          <li><a href="#mission">Mission</a></li>
-          <li><a href="#programs">Programs</a></li>
-          <li><a href="#involved">Get Involved</a></li>
-          <li><a href="#donate" class="btn btn-primary">Donate</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="mission.html">Mission</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+          <li><a href="donate.html" class="btn btn-primary">Donate</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -85,8 +91,8 @@
         <h1 class="hero-title">Open Arms</h1>
         <p class="hero-tag">Hope. Support. Community.</p>
         <div class="hero-cta">
-          <a class="btn btn-primary" href="#donate">Donate</a>
-          <a class="btn btn-ghost" href="#involved">Volunteer</a>
+          <a class="btn btn-primary" href="donate.html">Donate</a>
+          <a class="btn btn-ghost" href="get-involved.html">Volunteer</a>
         </div>
       </div>
     </section>
@@ -106,7 +112,7 @@
             <li>Education & resources</li>
             <li>Lasting community impact</li>
           </ul>
-          <a class="btn" href="#programs">Explore Programs</a>
+          <a class="btn btn-primary" href="programs.html">Explore Programs</a>
         </div>
 
         <figure class="card photo">
@@ -275,11 +281,11 @@
       </div>
       <p class="muted tiny">© <span id="year"></span> Open Arms Initiative. All rights reserved.</p>
       <nav aria-label="Footer">
-        <a href="#mission">Mission</a>
-        <a href="#programs">Programs</a>
-        <a href="#involved">Volunteer</a>
-        <a href="#donate">Donate</a>
-        <a href="#contact">Contact</a>
+        <a href="mission.html">Mission</a>
+        <a href="programs.html">Programs</a>
+        <a href="get-involved.html">Volunteer</a>
+        <a href="donate.html">Donate</a>
+        <a href="contact.html">Contact</a>
       </nav>
     </div>
   </footer>

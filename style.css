@@ -1,6 +1,6 @@
-/* Open Arms Light Mode - Clean & Modern */
+/* Open Arms - Mobile-First Design */
 
-/* Light mode custom properties */
+/* CSS Variables */
 :root {
   --bg: #ffffff;
   --bg-2: #f8fafc;
@@ -18,6 +18,39 @@
   --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
   --radius: 1rem;
+}
+
+/* Modern Page Transitions */
+@supports (view-transition-name: none) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.3s;
+  }
+  
+  ::view-transition-old(root) {
+    animation-name: fade-out;
+  }
+  
+  ::view-transition-new(root) {
+    animation-name: fade-in;
+  }
+}
+
+@keyframes fade-out {
+  to { opacity: 0; }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+}
+
+.page-transition {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* Base styles */
@@ -471,6 +504,52 @@ img {
   clip: rect(0, 0, 0, 0);
   white-space: nowrap;
   border: 0;
+}
+
+.lead {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--text-light);
+}
+
+.list {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.list li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.list li:last-child {
+  border-bottom: none;
+}
+
+.contact-list a {
+  color: var(--brand);
+  word-break: break-all;
+}
+
+/* Active navigation state */
+.site-nav a.active {
+  color: var(--brand);
+  font-weight: 600;
+}
+
+.page-content {
+  min-height: 60vh;
+}
+
+/* Mobile-first touch targets */
+@media (hover: none) {
+  .btn,
+  .site-nav a,
+  .nav-toggle {
+    min-height: 44px;
+    min-width: 44px;
+  }
 }
 
 /* Responsive */
