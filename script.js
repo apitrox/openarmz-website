@@ -44,8 +44,8 @@ function wireForm(id){
       form.reportValidity();
       return;
     }
-    msg.textContent = 'Thanks! We\'ll be in touch soon.';
-    msg.style.color = '#86efac';
+    msg.textContent = 'Thank you! We\'ll be in touch soon.';
+    msg.style.color = '#68B42E';
     form.reset();
   });
 }

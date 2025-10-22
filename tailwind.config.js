@@ -7,10 +7,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'openarms-blue': '#0EA5E9',
-        'openarms-blue-dark': '#0284C7',
-        'openarms-green': '#36D399',
-        'openarms-green-light': '#86EFAC',
+        'openarms-blue': '#007CBA',
+        'openarms-blue-dark': '#007CBA',
+        'openarms-green': '#68B42E',
+        'openarms-green-light': '#68B42E',
         'openarms-cyan': '#22D3EE',
         'openarms-sky': '#38BDF8',
       },
