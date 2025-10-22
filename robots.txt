@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Disallow assets and scripts
+Disallow: /script.js
+Disallow: /style.css
+Disallow: /images/
+
+# Sitemap
+Sitemap: https://apitrox.github.io/openarmz-website/sitemap.xml
