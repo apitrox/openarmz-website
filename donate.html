@@ -52,11 +52,11 @@
 
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <ul>
-          <li><a href="mission.html">Mission</a></li>
-          <li><a href="programs.html">Programs</a></li>
-          <li><a href="get-involved.html">Get Involved</a></li>
-          <li><a href="donate.html" class="btn btn-primary active">Donate</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mission.html" data-i18n="nav_mission">Mission</a></li>
+          <li><a href="programs.html" data-i18n="nav_programs">Programs</a></li>
+          <li><a href="get-involved.html" data-i18n="nav_involved">Get Involved</a></li>
+          <li><a href="donate.html" class="btn btn-primary active" data-i18n="nav_donate">Donate</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -66,8 +66,8 @@
     <section class="section page-content donate">
       <div class="container grid-2">
         <div>
-          <h1>Support the Work</h1>
-          <p class="lead">Your gift sustains vital programs and expands our reach. Every contribution matters.</p>
+          <h1 data-i18n="donate_heading">Support the Work</h1>
+          <p class="lead" data-i18n="donate_intro">Your gift sustains vital programs and expands our reach. Every contribution matters.</p>
 
           <div class="card donorbox-wrap">
             <iframe
@@ -84,24 +84,24 @@
             </iframe>
           </div>
 
-          <p class="muted tiny">Prefer another method?</p>
+          <p class="muted tiny" data-i18n="donate_prefer">Prefer another method?</p>
           <div class="donate-cta">
-            <a class="btn btn-primary" href="https://buy.stripe.com/test_XXXXXXXXXXXX" rel="noopener" target="_blank">Donate via Stripe</a>
-            <a class="btn" href="https://www.paypal.com/donate/?hosted_button_id=XXXXXXXXXXXX" rel="noopener" target="_blank">Donate via PayPal</a>
+            <a class="btn btn-primary" href="https://buy.stripe.com/test_XXXXXXXXXXXX" rel="noopener" target="_blank" data-i18n="donate_stripe">Donate via Stripe</a>
+            <a class="btn" href="https://www.paypal.com/donate/?hosted_button_id=XXXXXXXXXXXX" rel="noopener" target="_blank" data-i18n="donate_paypal">Donate via PayPal</a>
           </div>
         </div>
 
         <div class="card">
-          <h2>Why Give</h2>
+          <h2 data-i18n="donate_why_title">Why Give</h2>
           <ul class="checks">
-            <li>Transparent, mission-driven spending</li>
-            <li>Local impact with measurable results</li>
-            <li>Tax-deductible contributions (where applicable)</li>
+            <li data-i18n="donate_why1">Transparent, mission-driven spending</li>
+            <li data-i18n="donate_why2">Local impact with measurable results</li>
+            <li data-i18n="donate_why3">Tax-deductible contributions (where applicable)</li>
           </ul>
           <figure class="photo tight">
             <img src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?q=80&w=1200&auto=format&fit=crop" alt="Hands joined together in solidarity" />
           </figure>
-          <p class="muted">Your support directly funds emergency assistance, educational programs, and community resources that change lives.</p>
+          <p class="muted" data-i18n="donate_why_desc">Your support directly funds emergency assistance, educational programs, and community resources that change lives.</p>
         </div>
       </div>
     </section>
@@ -111,19 +111,23 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <div>
-          <strong>Open Arms</strong>
-          <div class="muted tiny">Initiative</div>
+          <strong data-i18n="footer_brand">Open Arms</strong>
+          <div class="muted tiny" data-i18n="footer_sub">Initiative</div>
         </div>
       </div>
-      <p class="muted tiny">© <span id="year"></span> Open Arms Initiative. All rights reserved.</p>
+      <p class="muted tiny">© <span id="year"></span> <span data-i18n="footer_copyright">Open Arms Initiative. All rights reserved.</span></p>
       <nav aria-label="Footer">
-        <a href="mission.html">Mission</a>
-        <a href="programs.html">Programs</a>
-        <a href="get-involved.html">Volunteer</a>
-        <a href="donate.html">Donate</a>
-        <a href="contact.html">Contact</a>
+        <a href="mission.html" data-i18n="footer_mission">Mission</a>
+        <a href="programs.html" data-i18n="footer_programs">Programs</a>
+        <a href="get-involved.html" data-i18n="footer_volunteer">Volunteer</a>
+        <a href="donate.html" data-i18n="footer_donate">Donate</a>
+        <a href="contact.html" data-i18n="footer_contact">Contact</a>
       </nav>
     </div>
   </footer>
+  
+  <!-- Language Translation -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/language-handler.js"></script>
 </body>
 </html>

@@ -51,11 +51,11 @@
 
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <ul>
-          <li><a href="mission.html">Mission</a></li>
-          <li><a href="programs.html">Programs</a></li>
-          <li><a href="get-involved.html">Get Involved</a></li>
-          <li><a href="donate.html" class="btn btn-primary">Donate</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="mission.html" data-i18n="nav_mission">Mission</a></li>
+          <li><a href="programs.html" data-i18n="nav_programs">Programs</a></li>
+          <li><a href="get-involved.html" data-i18n="nav_involved">Get Involved</a></li>
+          <li><a href="donate.html" class="btn btn-primary" data-i18n="nav_donate">Donate</a></li>
+          <li><a href="contact.html" class="active" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -65,35 +65,35 @@
     <section class="section page-content">
       <div class="container grid-2">
         <div>
-          <h1>Contact</h1>
-          <p class="lead">Questions, partnerships, press inquiries—let's talk.</p>
+          <h1 data-i18n="contact_heading">Contact</h1>
+          <p class="lead" data-i18n="contact_lead">Questions, partnerships, press inquiries—let's talk.</p>
           <ul class="list contact-list">
-            <li><strong>Email:</strong> <a href="mailto:hello@openarms.example">hello@openarms.example</a></li>
-            <li><strong>Phone:</strong> <a href="tel:0000000000">(000) 000-0000</a></li>
-            <li><strong>Address:</strong> 123 Hope St, Community, USA</li>
+            <li><strong data-i18n="contact_email_label">Email:</strong> <a href="mailto:hello@openarms.example">hello@openarms.example</a></li>
+            <li><strong data-i18n="contact_phone_label">Phone:</strong> <a href="tel:0000000000">(000) 000-0000</a></li>
+            <li><strong data-i18n="contact_address_label">Address:</strong> <span data-i18n="contact_address">123 Hope St, Community, USA</span></li>
           </ul>
-          <p>We typically respond to inquiries within 1-2 business days.</p>
+          <p data-i18n="contact_response">We typically respond to inquiries within 1-2 business days.</p>
         </div>
         
         <form class="card form" id="contact-form" novalidate>
-          <h2>Send a Message</h2>
+          <h2 data-i18n="contact_form_title">Send a Message</h2>
           <label>
-            <span>Name</span>
+            <span data-i18n="contact_form_name">Name</span>
             <input required name="cname" autocomplete="name" />
           </label>
           <label>
-            <span>Email</span>
+            <span data-i18n="contact_form_email">Email</span>
             <input required type="email" name="cemail" autocomplete="email" />
           </label>
           <label>
-            <span>Subject</span>
+            <span data-i18n="contact_form_subject">Subject</span>
             <input name="subject" />
           </label>
           <label>
-            <span>Message</span>
+            <span data-i18n="contact_form_message">Message</span>
             <textarea required name="cmsg" rows="5"></textarea>
           </label>
-          <button class="btn btn-primary" type="submit">Submit</button>
+          <button class="btn btn-primary" type="submit" data-i18n="contact_form_submit">Submit</button>
           <p class="form-msg" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -104,19 +104,23 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <div>
-          <strong>Open Arms</strong>
-          <div class="muted tiny">Initiative</div>
+          <strong data-i18n="footer_brand">Open Arms</strong>
+          <div class="muted tiny" data-i18n="footer_sub">Initiative</div>
         </div>
       </div>
-      <p class="muted tiny">© <span id="year"></span> Open Arms Initiative. All rights reserved.</p>
+      <p class="muted tiny">© <span id="year"></span> <span data-i18n="footer_copyright">Open Arms Initiative. All rights reserved.</span></p>
       <nav aria-label="Footer">
-        <a href="mission.html">Mission</a>
-        <a href="programs.html">Programs</a>
-        <a href="get-involved.html">Volunteer</a>
-        <a href="donate.html">Donate</a>
-        <a href="contact.html">Contact</a>
+        <a href="mission.html" data-i18n="footer_mission">Mission</a>
+        <a href="programs.html" data-i18n="footer_programs">Programs</a>
+        <a href="get-involved.html" data-i18n="footer_volunteer">Volunteer</a>
+        <a href="donate.html" data-i18n="footer_donate">Donate</a>
+        <a href="contact.html" data-i18n="footer_contact">Contact</a>
       </nav>
     </div>
   </footer>
+  
+  <!-- Language Translation -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/language-handler.js"></script>
 </body>
 </html>

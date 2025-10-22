@@ -51,11 +51,11 @@
 
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <ul>
-          <li><a href="mission.html" class="active">Mission</a></li>
-          <li><a href="programs.html">Programs</a></li>
-          <li><a href="get-involved.html">Get Involved</a></li>
-          <li><a href="donate.html" class="btn btn-primary">Donate</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mission.html" class="active" data-i18n="nav_mission">Mission</a></li>
+          <li><a href="programs.html" data-i18n="nav_programs">Programs</a></li>
+          <li><a href="get-involved.html" data-i18n="nav_involved">Get Involved</a></li>
+          <li><a href="donate.html" class="btn btn-primary" data-i18n="nav_donate">Donate</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -65,23 +65,23 @@
     <section class="section page-content">
       <div class="container grid-2">
         <div>
-          <h1 class="mission-heading">Our Mission</h1>
-          <p class="lead">
+          <h1 class="mission-heading" data-i18n="mission_page_title">Our Mission</h1>
+          <p class="lead" data-i18n="mission_page_lead">
             The <strong>Open Arms Initiative</strong> is dedicated to strengthening our community by extending compassion,
             support, and opportunity to those in need. Through donations, education, and resource development, we uplift
             individuals and families—fostering resilience, dignity, and hope.
           </p>
           <ul class="checks">
-            <li>Compassion in action</li>
-            <li>Education & resources</li>
-            <li>Lasting community impact</li>
+            <li data-i18n="mission_check1">Compassion in action</li>
+            <li data-i18n="mission_check2">Education & resources</li>
+            <li data-i18n="mission_check3">Lasting community impact</li>
           </ul>
-          <a class="btn btn-primary" href="programs.html">Explore Programs</a>
+          <a class="btn btn-primary" href="programs.html" data-i18n="mission_cta">Explore Programs</a>
         </div>
 
         <figure class="card photo">
           <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=1400&auto=format&fit=crop" alt="Food distribution volunteers serving community members" />
-          <figcaption class="muted tiny">Volunteers serving neighbors</figcaption>
+          <figcaption class="muted tiny" data-i18n="mission_caption">Volunteers serving neighbors</figcaption>
         </figure>
       </div>
     </section>
@@ -91,19 +91,23 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <div>
-          <strong>Open Arms</strong>
-          <div class="muted tiny">Initiative</div>
+          <strong data-i18n="footer_brand">Open Arms</strong>
+          <div class="muted tiny" data-i18n="footer_sub">Initiative</div>
         </div>
       </div>
-      <p class="muted tiny">© <span id="year"></span> Open Arms Initiative. All rights reserved.</p>
+      <p class="muted tiny">© <span id="year"></span> <span data-i18n="footer_copyright">Open Arms Initiative. All rights reserved.</span></p>
       <nav aria-label="Footer">
-        <a href="mission.html">Mission</a>
-        <a href="programs.html">Programs</a>
-        <a href="get-involved.html">Volunteer</a>
-        <a href="donate.html">Donate</a>
-        <a href="contact.html">Contact</a>
+        <a href="mission.html" data-i18n="footer_mission">Mission</a>
+        <a href="programs.html" data-i18n="footer_programs">Programs</a>
+        <a href="get-involved.html" data-i18n="footer_volunteer">Volunteer</a>
+        <a href="donate.html" data-i18n="footer_donate">Donate</a>
+        <a href="contact.html" data-i18n="footer_contact">Contact</a>
       </nav>
     </div>
   </footer>
+  
+  <!-- Language Translation -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/language-handler.js"></script>
 </body>
 </html>

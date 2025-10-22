@@ -51,11 +51,11 @@
 
       <nav id="site-nav" class="site-nav" aria-label="Primary">
         <ul>
-          <li><a href="mission.html">Mission</a></li>
-          <li><a href="programs.html" class="active">Programs</a></li>
-          <li><a href="get-involved.html">Get Involved</a></li>
-          <li><a href="donate.html" class="btn btn-primary">Donate</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="mission.html" data-i18n="nav_mission">Mission</a></li>
+          <li><a href="programs.html" class="active" data-i18n="nav_programs">Programs</a></li>
+          <li><a href="get-involved.html" data-i18n="nav_involved">Get Involved</a></li>
+          <li><a href="donate.html" class="btn btn-primary" data-i18n="nav_donate">Donate</a></li>
+          <li><a href="contact.html" data-i18n="nav_contact">Contact</a></li>
         </ul>
       </nav>
     </div>
@@ -64,38 +64,38 @@
   <main id="main">
     <section class="section page-content alt">
       <div class="container">
-        <h1>Programs & Services</h1>
-        <p class="lead">We offer comprehensive programs designed to provide immediate support and long-term empowerment.</p>
+        <h1 data-i18n="programs_heading">Programs & Services</h1>
+        <p class="lead" data-i18n="programs_lead">We offer comprehensive programs designed to provide immediate support and long-term empowerment.</p>
 
         <div class="cards">
           <article class="card program">
             <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200&auto=format&fit=crop" alt="Volunteer handing a care package" />
             <div class="program-body">
-              <h2>Emergency Support</h2>
-              <p>Rapid assistance connecting families to food, shelter, and essentials when they need it most.</p>
+              <h2 data-i18n="program1_title">Emergency Support</h2>
+              <p data-i18n="program1_desc">Rapid assistance connecting families to food, shelter, and essentials when they need it most.</p>
             </div>
           </article>
 
           <article class="card program">
             <img src="https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?q=80&w=1200&auto=format&fit=crop" alt="Mentor helping a student with homework" />
             <div class="program-body">
-              <h2>Education & Skills</h2>
-              <p>Workshops and mentorship programs to build confidence, skills, and opportunity for the future.</p>
+              <h2 data-i18n="program2_title">Education & Skills</h2>
+              <p data-i18n="program2_desc">Workshops and mentorship programs to build confidence, skills, and opportunity for the future.</p>
             </div>
           </article>
 
           <article class="card program">
             <img src="https://images.unsplash.com/photo-1493836512294-502baa1986e2?q=80&w=1200&auto=format&fit=crop" alt="Community health clinic interaction" />
             <div class="program-body">
-              <h2>Community Resources</h2>
-              <p>Navigation help for healthcare, legal aid, and social services to ensure everyone has access.</p>
+              <h2 data-i18n="program3_title">Community Resources</h2>
+              <p data-i18n="program3_desc">Navigation help for healthcare, legal aid, and social services to ensure everyone has access.</p>
             </div>
           </article>
         </div>
 
         <div style="margin-top: 3rem; text-align: center;">
-          <a class="btn btn-primary" href="get-involved.html">Get Involved</a>
-          <a class="btn" href="donate.html">Support Our Programs</a>
+          <a class="btn btn-primary" href="get-involved.html" data-i18n="programs_cta1">Get Involved</a>
+          <a class="btn" href="donate.html" data-i18n="programs_cta2">Support Our Programs</a>
         </div>
       </div>
     </section>
@@ -105,19 +105,23 @@
     <div class="container footer-inner">
       <div class="footer-brand">
         <div>
-          <strong>Open Arms</strong>
-          <div class="muted tiny">Initiative</div>
+          <strong data-i18n="footer_brand">Open Arms</strong>
+          <div class="muted tiny" data-i18n="footer_sub">Initiative</div>
         </div>
       </div>
-      <p class="muted tiny">© <span id="year"></span> Open Arms Initiative. All rights reserved.</p>
+      <p class="muted tiny">© <span id="year"></span> <span data-i18n="footer_copyright">Open Arms Initiative. All rights reserved.</span></p>
       <nav aria-label="Footer">
-        <a href="mission.html">Mission</a>
-        <a href="programs.html">Programs</a>
-        <a href="get-involved.html">Volunteer</a>
-        <a href="donate.html">Donate</a>
-        <a href="contact.html">Contact</a>
+        <a href="mission.html" data-i18n="footer_mission">Mission</a>
+        <a href="programs.html" data-i18n="footer_programs">Programs</a>
+        <a href="get-involved.html" data-i18n="footer_volunteer">Volunteer</a>
+        <a href="donate.html" data-i18n="footer_donate">Donate</a>
+        <a href="contact.html" data-i18n="footer_contact">Contact</a>
       </nav>
     </div>
   </footer>
+  
+  <!-- Language Translation -->
+  <script src="assets/js/translations.js"></script>
+  <script src="assets/js/language-handler.js"></script>
 </body>
 </html>
