@@ -248,31 +248,8 @@ img {
 
 /* Hero section */
 .hero {
-  position: relative;
   padding: 5rem 0 3rem;
-  isolation: isolate;
   background: linear-gradient(180deg, #f0f9ff 0%, #ffffff 100%);
-}
-
-.hero-media {
-  position: absolute;
-  inset: 0;
-  z-index: -1;
-  overflow: hidden;
-}
-
-.hero-media img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.3;
-  filter: grayscale(20%) contrast(100%) saturate(110%);
-}
-
-.hero-media .hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0.8) 0%, transparent 100%);
 }
 
 .hero-inner {

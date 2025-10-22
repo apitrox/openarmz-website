@@ -51,3 +51,15 @@ function wireForm(id){
 }
 wireForm('volunteer-form');
 wireForm('contact-form');
+
+// Scroll to top when navigating to sections
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+  link.addEventListener('click', (e) => {
+    const href = link.getAttribute('href');
+    if (href && href !== '#') {
+      setTimeout(() => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      }, 10);
+    }
+  });
+});
